@@ -11,6 +11,7 @@ void (*get_function(char *opcode))(stack_t **stack, unsigned int line_number)
 	instruction_t functions[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 	int counter = 0;
