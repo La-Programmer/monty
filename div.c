@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include "monty.h"
 /**
- * div - Divides the second top element of the stack by the top element of the stack
+ * divi - Divides the second top element of the stack by
+ * the top element of the stack
  * @stack: Pointer to the stack address
  * @line_number: Line number
  * Return: Nothing

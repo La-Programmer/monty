@@ -18,6 +18,7 @@ void (*get_function(char *opcode))(stack_t **stack, unsigned int line_number)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", divi},
+		{"mul", mul},
 		{NULL, NULL}
 	};
 	int counter = 0;
