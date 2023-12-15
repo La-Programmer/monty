@@ -9,9 +9,11 @@
  */
 void pall(stack_t **stack, unsigned int __attribute__ ((unused)) line_number)
 {
-	while (*stack != NULL)
+	stack_t *holder = *stack;
+
+	while (holder != NULL)
 	{
-		printf("%d\n", (*stack)->n);
-		*stack = (*stack)->next;
+		printf("%d\n", (holder)->n);
+		holder = (holder)->next;
 	}
 }

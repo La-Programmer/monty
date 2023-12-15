@@ -37,6 +37,7 @@ int main(int argc, char *argv[])
 		}
 		else
 			function(&head, line_number);
+		/*printf("Node value: %d\n", head->n);*/
 		line_number++;
 	}
 	return (0);
