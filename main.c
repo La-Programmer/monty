@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 #include "monty.h"
 /**
@@ -28,7 +29,13 @@ int main(int argc, char *argv[])
 	}
 	while (fgets(line, 100, fp) != NULL)
 	{
+		operand = NULL;
 		file_reader(line, &opcode);
+		if (!strcmp(opcode, "push") && (operand == NULL))
+		{
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
+			exit(EXIT_FAILURE);
+		}
 		function = get_function(opcode);
 		if (function == NULL)
 		{

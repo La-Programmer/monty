@@ -15,7 +15,7 @@ void push(stack_t **stack, unsigned int line_number)
 	long int long_data = strtol(operand, &endptr, 10);
 	int data;
 
-	if (*endptr != '\0' && !isspace((unsigned char)*endptr))
+	if ((*endptr != '\0' && !isspace((unsigned char)*endptr)))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
